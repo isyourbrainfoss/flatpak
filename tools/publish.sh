@@ -55,7 +55,9 @@ flatpak build-update-repo "${SIGN[@]}" --gpg-import=keys/isyourbrainfoss-flatpak
   --title="isyourbrainfoss apps" --default-branch="$BRANCH" \
   --generate-static-deltas --static-delta-ignore-ref='*.Debug' \
   --prune --prune-depth=1 repo
-ostree --repo=repo summary --view | grep -v 'xa.gpg-keys' | cut -c1-200 | head -40
+ostree --repo=repo summary --view > summary-view.txt
+grep -v 'xa.gpg-keys' summary-view.txt | cut -c1-200 | head -60 || true
+rm -f summary-view.txt
 
 # 5. Site.
 python3 tools/gen_site.py
