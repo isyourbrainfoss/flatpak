@@ -1,0 +1,41 @@
+# Apps published to https://isyourbrainfoss.github.io/flatpak/ (remote name: isyourbrainfoss).
+#
+# source.type:
+#   build   - this repo builds the app from its manifest at the newest GitHub release tag
+#             (public repos only), on native x86_64 / aarch64 runners.
+#   release - the app repo builds and attaches <id>-<arch>.flatpak bundles to a GitHub
+#             release whose tag starts with tag_prefix; this repo imports and signs them.
+# Nothing is signed outside this repo.
+apps:
+  - id: org.gator.Gator
+    name: Gator
+    summary: GTK4/Libadwaita frontend for croc secure file transfers
+    homepage: https://github.com/isyourbrainfoss/gator
+    icon: https://raw.githubusercontent.com/isyourbrainfoss/gator/master/data/org.gator.Gator.svg
+    archs: [x86_64, aarch64]
+    source:
+      type: build
+      repo: isyourbrainfoss/gator
+      manifest: org.gator.Gator.devel.yml   # type: dir manifest, built from the checked-out tag
+
+  - id: io.github.isyourbrainfoss.CakeWalletMobile
+    name: Cake Wallet Mobile
+    summary: Unofficial aarch64 build of Cake Wallet for Linux phones
+    homepage: https://github.com/isyourbrainfoss/cake_wallet/tree/linux-arm64
+    icon: https://raw.githubusercontent.com/isyourbrainfoss/cake_wallet/linux-arm64/assets/images/cakewallet_icon_180.png
+    archs: [aarch64]
+    source:
+      type: release
+      repo: isyourbrainfoss/cake_wallet
+      tag_prefix: mobile-
+
+  - id: io.github.isyourbrainfoss.ProtonPassGtk
+    name: Proton Pass GTK
+    summary: Unofficial adaptive GTK frontend for Proton Pass CLI
+    homepage: https://github.com/isyourbrainfoss/proton-pass-gtk
+    icon: https://raw.githubusercontent.com/isyourbrainfoss/proton-pass-gtk/main/data/icons/hicolor/scalable/apps/io.github.isyourbrainfoss.ProtonPassGtk.svg
+    archs: [x86_64, aarch64]
+    source:
+      type: release
+      repo: isyourbrainfoss/proton-pass-gtk
+      tag_prefix: v
