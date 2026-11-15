@@ -42,7 +42,7 @@ Title=isyourbrainfoss apps
 Url={REPO_URL}
 Homepage={SITE_URL}/
 Comment=Signed Flatpak builds of isyourbrainfoss apps
-Description=Gator, Cake Wallet Mobile and other apps by isyourbrainfoss, for x86_64 and aarch64
+Description=Gator, Progressor, Cake Wallet Mobile, Proton Pass GTK and other apps by isyourbrainfoss, for x86_64 and aarch64
 DeployCollectionID={COLLECTION_ID}
 RuntimeRepo={RUNTIME_REPO}
 GPGKey={key_b64}
@@ -110,7 +110,11 @@ flatpak remote-delete --user gator
 
 # Cake Wallet Mobile installed from a .flatpak bundle:
 flatpak install --user --reinstall {REMOTE} io.github.isyourbrainfoss.CakeWalletMobile
-flatpak remote-delete --user cakewalletmobile1-origin</pre>
+flatpak remote-delete --user cakewalletmobile1-origin
+
+# Progressor from the old unsigned repo (remote "progressor"):
+flatpak install --user --reinstall {REMOTE} com.isyourbrainfoss.Progressor
+flatpak remote-delete --user progressor</pre>
 <p>App data in <code>~/.var/app/</code> is kept. Use <code>--system</code> instead of
 <code>--user</code> for system-wide installs.</p>
 <footer><a href="https://github.com/isyourbrainfoss/flatpak">Source and build workflow</a></footer>

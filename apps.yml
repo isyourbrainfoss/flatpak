@@ -39,3 +39,14 @@ apps:
       type: release
       repo: isyourbrainfoss/proton-pass-gtk
       tag_prefix: v
+
+  - id: com.isyourbrainfoss.Progressor
+    name: Progressor
+    summary: Training app for the Tindeq Progressor force gauge
+    homepage: https://github.com/isyourbrainfoss/Progressor
+    icon: https://raw.githubusercontent.com/isyourbrainfoss/Progressor/main/flatpak/icons/hicolor/scalable/apps/com.isyourbrainfoss.Progressor.svg
+    archs: [x86_64, aarch64]
+    source:
+      type: release
+      repo: isyourbrainfoss/Progressor
+      tag_prefix: continuous     # rolling release, updated on every push to main
