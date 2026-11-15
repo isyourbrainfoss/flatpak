@@ -50,3 +50,25 @@ apps:
       type: release
       repo: isyourbrainfoss/Progressor
       tag_prefix: continuous     # rolling release, updated on every push to main
+
+  - id: com.isyourbrainfoss.Navigation
+    name: Navigation
+    summary: Simple multi-platform OSM navigation for Linux desktop and mobile
+    homepage: https://github.com/isyourbrainfoss/navigation
+    icon: https://raw.githubusercontent.com/isyourbrainfoss/navigation/main/flatpak/icons/hicolor/scalable/apps/com.isyourbrainfoss.Navigation.svg
+    archs: [x86_64, aarch64]
+    source:
+      type: release
+      repo: isyourbrainfoss/navigation
+      tag_prefix: build-
+
+  - id: com.isyourbrainfoss.Spectrogram
+    name: Spectrogram
+    summary: Live microphone spectrogram for Linux desktop and mobile
+    homepage: https://github.com/isyourbrainfoss/spectrogram
+    icon: https://raw.githubusercontent.com/isyourbrainfoss/spectrogram/main/flatpak/icons/hicolor/scalable/apps/com.isyourbrainfoss.Spectrogram.svg
+    archs: [x86_64, aarch64]
+    source:
+      type: release
+      repo: isyourbrainfoss/spectrogram
+      tag_prefix: build-

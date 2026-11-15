@@ -17,6 +17,8 @@ Opening `isyourbrainfoss.flatpakrepo` in GNOME Software or KDE Discover adds it 
 | Gator `org.gator.Gator` | x86_64, aarch64 | built here from the newest [gator](https://github.com/isyourbrainfoss/gator) release tag |
 | Cake Wallet Mobile `io.github.isyourbrainfoss.CakeWalletMobile` | aarch64 | bundle from [cake_wallet](https://github.com/isyourbrainfoss/cake_wallet) releases `mobile-*` |
 | Progressor `com.isyourbrainfoss.Progressor` | x86_64, aarch64 | bundles on the [Progressor](https://github.com/isyourbrainfoss/Progressor) `continuous` release |
+| Navigation `com.isyourbrainfoss.Navigation` | x86_64, aarch64 | bundles on [navigation](https://github.com/isyourbrainfoss/navigation) `build-*` releases |
+| Spectrogram `com.isyourbrainfoss.Spectrogram` | x86_64, aarch64 | bundles on [spectrogram](https://github.com/isyourbrainfoss/spectrogram) `build-*` releases |
 | Proton Pass GTK `io.github.isyourbrainfoss.ProtonPassGtk` | x86_64, aarch64 | bundles from [proton-pass-gtk](https://github.com/isyourbrainfoss/proton-pass-gtk) releases `v*` |
 
 ## Signing key
