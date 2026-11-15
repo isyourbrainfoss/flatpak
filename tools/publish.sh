@@ -16,7 +16,12 @@ ostree --repo=repo init --mode=archive-z2 --collection-id="$COLLECTION_ID"
 if curl -fsSI "$SITE_URL/repo/summary" >/dev/null 2>&1; then
   ostree --repo=repo remote add --gpg-import=keys/isyourbrainfoss-flatpak.gpg \
     --collection-id="$COLLECTION_ID" live "$SITE_URL/repo/"
-  ostree --repo=repo pull --mirror --depth=1 live
+  # Pages occasionally answers 503; retry before giving up (a failure aborts before deploy).
+  for attempt in 1 2 3 4 5; do
+    ostree --repo=repo pull --mirror --depth=1 live && break
+    [ "$attempt" = 5 ] && { echo "::error::mirroring the live repo failed"; exit 1; }
+    echo "mirror pull failed (attempt $attempt/5), retrying in $((attempt * 15))s"; sleep $((attempt * 15))
+  done
   ostree --repo=repo remote delete live
 else
   echo "::notice::No live repo yet, starting empty"
