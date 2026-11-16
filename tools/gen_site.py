@@ -42,7 +42,7 @@ Title=isyourbrainfoss apps
 Url={REPO_URL}
 Homepage={SITE_URL}/
 Comment=Signed Flatpak builds of isyourbrainfoss apps
-Description=Gator, Navigation, Spectrogram, Progressor, Cake Wallet Mobile, Proton Pass GTK by isyourbrainfoss, for x86_64 and aarch64
+Description=Gator, Navigation, Spectrogram, Flowlog, Progressor, Cake Wallet Mobile, Proton Pass GTK by isyourbrainfoss, for x86_64 and aarch64
 DeployCollectionID={COLLECTION_ID}
 RuntimeRepo={RUNTIME_REPO}
 GPGKey={key_b64}
@@ -120,7 +120,11 @@ flatpak remote-delete --user progressor
 flatpak install --user --reinstall {REMOTE} com.isyourbrainfoss.Navigation
 flatpak remote-delete --user navigation
 flatpak install --user --reinstall {REMOTE} com.isyourbrainfoss.Spectrogram
-flatpak remote-delete --user spectrogram</pre>
+flatpak remote-delete --user spectrogram
+
+# Flowlog from its old unsigned repo (remote "flowlog"):
+flatpak install --user --reinstall {REMOTE} com.flowlog.flowlog
+flatpak remote-delete --user flowlog</pre>
 <p>App data in <code>~/.var/app/</code> is kept. Use <code>--system</code> instead of
 <code>--user</code> for system-wide installs.</p>
 <footer><a href="https://github.com/isyourbrainfoss/flatpak">Source and build workflow</a></footer>

@@ -1,0 +1,132 @@
+{
+  "apps": [
+    {
+      "id": "org.gator.Gator",
+      "name": "Gator",
+      "summary": "GTK4/Libadwaita frontend for croc secure file transfers",
+      "homepage": "https://github.com/isyourbrainfoss/gator",
+      "icon": "https://raw.githubusercontent.com/isyourbrainfoss/gator/master/data/org.gator.Gator.svg",
+      "archs": [
+        "x86_64",
+        "aarch64"
+      ],
+      "published": {}
+    },
+    {
+      "id": "io.github.isyourbrainfoss.CakeWalletMobile",
+      "name": "Cake Wallet Mobile",
+      "summary": "Unofficial aarch64 build of Cake Wallet for Linux phones",
+      "homepage": "https://github.com/isyourbrainfoss/cake_wallet/tree/linux-arm64",
+      "icon": "https://raw.githubusercontent.com/isyourbrainfoss/cake_wallet/linux-arm64/assets/images/cakewallet_icon_180.png",
+      "archs": [
+        "aarch64"
+      ],
+      "published": {}
+    },
+    {
+      "id": "io.github.isyourbrainfoss.ProtonPassGtk",
+      "name": "Proton Pass GTK",
+      "summary": "Unofficial adaptive GTK frontend for Proton Pass CLI",
+      "homepage": "https://github.com/isyourbrainfoss/proton-pass-gtk",
+      "icon": "https://raw.githubusercontent.com/isyourbrainfoss/proton-pass-gtk/main/data/icons/hicolor/scalable/apps/io.github.isyourbrainfoss.ProtonPassGtk.svg",
+      "archs": [
+        "x86_64",
+        "aarch64"
+      ],
+      "published": {}
+    },
+    {
+      "id": "com.isyourbrainfoss.Progressor",
+      "name": "Progressor",
+      "summary": "Training app for the Tindeq Progressor force gauge",
+      "homepage": "https://github.com/isyourbrainfoss/Progressor",
+      "icon": "https://raw.githubusercontent.com/isyourbrainfoss/Progressor/main/flatpak/icons/hicolor/scalable/apps/com.isyourbrainfoss.Progressor.svg",
+      "archs": [
+        "x86_64",
+        "aarch64"
+      ],
+      "published": {}
+    },
+    {
+      "id": "com.isyourbrainfoss.Navigation",
+      "name": "Navigation",
+      "summary": "Simple multi-platform OSM navigation for Linux desktop and mobile",
+      "homepage": "https://github.com/isyourbrainfoss/navigation",
+      "icon": "https://raw.githubusercontent.com/isyourbrainfoss/navigation/main/flatpak/icons/hicolor/scalable/apps/com.isyourbrainfoss.Navigation.svg",
+      "archs": [
+        "x86_64",
+        "aarch64"
+      ],
+      "published": {}
+    },
+    {
+      "id": "com.isyourbrainfoss.Spectrogram",
+      "name": "Spectrogram",
+      "summary": "Live microphone spectrogram for Linux desktop and mobile",
+      "homepage": "https://github.com/isyourbrainfoss/spectrogram",
+      "icon": "https://raw.githubusercontent.com/isyourbrainfoss/spectrogram/main/flatpak/icons/hicolor/scalable/apps/com.isyourbrainfoss.Spectrogram.svg",
+      "archs": [
+        "x86_64",
+        "aarch64"
+      ],
+      "published": {}
+    },
+    {
+      "id": "com.flowlog.flowlog",
+      "name": "Flowlog",
+      "summary": "Personal coffee intelligence hub",
+      "homepage": "https://github.com/isyourbrainfoss/flowlog",
+      "icon": "https://raw.githubusercontent.com/isyourbrainfoss/flowlog/main/app/flowlog/assets/icon/app_icon.png",
+      "archs": [
+        "x86_64",
+        "aarch64"
+      ],
+      "published": {}
+    }
+  ],
+  "downloads": [
+    {
+      "app": "com.flowlog.flowlog",
+      "arch": "x86_64",
+      "repo": "isyourbrainfoss/flowlog",
+      "tag": "build-223",
+      "asset": "com.flowlog.flowlog-x86_64.flatpak",
+      "sha256_asset": null,
+      "key": "isyourbrainfoss/flowlog@build-223#659102026"
+    },
+    {
+      "app": "com.flowlog.flowlog",
+      "arch": "aarch64",
+      "repo": "isyourbrainfoss/flowlog",
+      "tag": "build-223",
+      "asset": "com.flowlog.flowlog-aarch64.flatpak",
+      "sha256_asset": null,
+      "key": "isyourbrainfoss/flowlog@build-223#659102025"
+    }
+  ],
+  "builds": [],
+  "previous_state": {
+    "apps": {
+      "org.gator.Gator": {
+        "x86_64": "isyourbrainfoss/gator@v1.6.3",
+        "aarch64": "isyourbrainfoss/gator@v1.6.3"
+      },
+      "io.github.isyourbrainfoss.ProtonPassGtk": {
+        "x86_64": "isyourbrainfoss/proton-pass-gtk@v0.2.0#751578961",
+        "aarch64": "isyourbrainfoss/proton-pass-gtk@v0.2.0#751578967"
+      },
+      "com.isyourbrainfoss.Progressor": {
+        "x86_64": "isyourbrainfoss/Progressor@continuous#751614127",
+        "aarch64": "isyourbrainfoss/Progressor@continuous#751614126"
+      },
+      "com.isyourbrainfoss.Navigation": {
+        "x86_64": "isyourbrainfoss/navigation@build-18#751644739",
+        "aarch64": "isyourbrainfoss/navigation@build-18#751644745"
+      },
+      "com.isyourbrainfoss.Spectrogram": {
+        "x86_64": "isyourbrainfoss/spectrogram@build-21#751666903",
+        "aarch64": "isyourbrainfoss/spectrogram@build-21#751666904"
+      }
+    }
+  }
+}

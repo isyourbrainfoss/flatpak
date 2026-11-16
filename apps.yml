@@ -72,3 +72,14 @@ apps:
       type: release
       repo: isyourbrainfoss/spectrogram
       tag_prefix: build-
+
+  - id: com.flowlog.flowlog
+    name: Flowlog
+    summary: Personal coffee intelligence hub
+    homepage: https://github.com/isyourbrainfoss/flowlog
+    icon: https://raw.githubusercontent.com/isyourbrainfoss/flowlog/main/app/flowlog/assets/icon/app_icon.png
+    archs: [x86_64, aarch64]
+    source:
+      type: release
+      repo: isyourbrainfoss/flowlog
+      tag_prefix: build-

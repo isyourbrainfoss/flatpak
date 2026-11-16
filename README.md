@@ -19,6 +19,7 @@ Opening `isyourbrainfoss.flatpakrepo` in GNOME Software or KDE Discover adds it 
 | Progressor `com.isyourbrainfoss.Progressor` | x86_64, aarch64 | bundles on the [Progressor](https://github.com/isyourbrainfoss/Progressor) `continuous` release |
 | Navigation `com.isyourbrainfoss.Navigation` | x86_64, aarch64 | bundles on [navigation](https://github.com/isyourbrainfoss/navigation) `build-*` releases |
 | Spectrogram `com.isyourbrainfoss.Spectrogram` | x86_64, aarch64 | bundles on [spectrogram](https://github.com/isyourbrainfoss/spectrogram) `build-*` releases |
+| Flowlog `com.flowlog.flowlog` | x86_64, aarch64 | bundles on [flowlog](https://github.com/isyourbrainfoss/flowlog) `build-*` releases |
 | Proton Pass GTK `io.github.isyourbrainfoss.ProtonPassGtk` | x86_64, aarch64 | bundles from [proton-pass-gtk](https://github.com/isyourbrainfoss/proton-pass-gtk) releases `v*` |
 
 ## Signing key
