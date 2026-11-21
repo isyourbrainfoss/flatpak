@@ -40,3 +40,32 @@ None needed. Pages deployment works the same way. Only the job that runs `deploy
 ### Rollback
 
 Revert the commit. This puts `deploy-pages` back as the last step of `publish`.
+
+## 2026-11-21 — Run `deploy` when `build` is skipped
+
+### What
+
+The `deploy` job in `.github/workflows/publish.yml` gets `if: always() && needs.publish.result == 'success'`. Nothing else changes.
+
+### Why
+
+The first run after the separate `deploy` job was merged (run 44897155103, push of PR #1) had nothing to rebuild, so `build` was skipped. `publish` still ran and succeeded, because it has its own `always()` condition, but GitHub skipped `deploy` because a job further up its chain was skipped. Nothing reached Pages. With `always()` plus the explicit check that `publish` succeeded, `deploy` runs whenever `publish` succeeded and never runs after a failed `publish`.
+
+### Files
+
+- `.github/workflows/publish.yml`
+- `docs/AVVIK.md`
+
+### sha256
+
+| File | sha256 |
+|---|---|
+| `.github/workflows/publish.yml` (after this change) | `31d50120a40568ac8660c85cdf04b084b56eb4e83c74ddce32553a07d8bc770c` |
+
+### Off switch
+
+None needed.
+
+### Rollback
+
+Revert the commit. `deploy` then runs only when no job in its chain was skipped.

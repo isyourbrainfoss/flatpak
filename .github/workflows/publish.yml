@@ -143,6 +143,10 @@ jobs:
   # job and reuses the same artifact instead of uploading a duplicate.
   deploy:
     needs: publish
+    # always() is required: when no app needs a rebuild the build job is
+    # skipped, and without it GitHub skips every job downstream of build,
+    # even though publish (which has its own always()) succeeded.
+    if: always() && needs.publish.result == 'success'
     runs-on: ubuntu-24.04
     permissions:
       pages: write
